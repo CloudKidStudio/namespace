@@ -4,21 +4,21 @@
 *  @class namespace
 *  @static
 */
-(function(global){
+(function(window){
 	
 	// The namespace function already exists
-	if ("namespace" in global) return;
+	if ("namespace" in window) return;
 	
 	/**
 	*  Create the namespace and assing to the window
 	*
 	*  @example
 		var SpriteUtils = function(){};
-		namespace('cloudkid.utils').SpriteUtils = SpriteUtils;
+		namespace('springroll').SpriteUtils = SpriteUtils;
 	*
 	*  @constructor
 	*  @method namespace
-	*  @param {string} namespaceString Name space, for instance 'cloudkid.utils'
+	*  @param {string} namespaceString Name space, for instance 'springroll.utils'
 	*  @return {object} The namespace object attached to the current window
 	*/
 	var namespace = function(namespaceString) {
@@ -35,8 +35,8 @@
 		return parent;
 	};
 	
-	// Assign to the global namespace
-	global.namespace = namespace;
+	// Assign to the window namespace
+	window.namespace = namespace;
 	
 }(window));
 

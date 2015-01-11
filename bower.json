@@ -1,5 +1,19 @@
 {
-    "name": "cloudkid-namespace",
-    "version": "1.0.0",
-    "main": "namespace.js"
+	"name": "namespace",
+	"version": "1.1.0",
+	"main": "dist/namespace.min.js",
+	"devDependencies": {
+		"bind-polyfill": "*",
+		"qunit": "*"
+	},
+	"ignore": [
+		"src",
+		"test",
+		".bowerrc",
+		".gitignore",
+		".travis.yml",
+		"Gruntfile.js",
+		"library.json",
+		"package.json"
+	]
 }

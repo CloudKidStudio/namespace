@@ -3,7 +3,7 @@ namespace
 
  [![Build Status](https://travis-ci.org/CloudKidStudio/namespace.svg?branch=master)](https://travis-ci.org/CloudKidStudio/namespace) [![Dependency Status](https://david-dm.org/CloudKidStudio/namespace.svg?style=flat)](https://david-dm.org/CloudKidStudio/namespace)
 
-A simple JavaScript utility for creating namespaces and organizing JavaScript classes into different packages.
+JavaScript utility for creating namespaces and organizing JavaScript classes into different packages.
 
 
 ##Installation

@@ -25,7 +25,7 @@ Use `namespace` global function to define your classes within closures.
 	var MyUtils = function(){};
 
 	// Assign to a global namespace
-	namespace('com.cloudkid.utils').MyUtils = MyUtils;
+	namespace('cloudkid.utils').MyUtils = MyUtils;
 
 }());
 ```
@@ -36,7 +36,23 @@ Use `include` to import a reference to the class. Will throw an error if the cla
 (function(){
 	
 	// Include the 
-	var MyUtils = include('com.cloudkid.utils.MyUtils');
+	var MyUtils = include('cloudkid.utils.MyUtils');
+
+}());
+```
+
+Use `extend` to inherit another class.  
+
+```js
+(function(){
+	
+	// Include the 
+	var MyClass = function(){};
+
+	// Second argument can either be the full path to the
+	// class as a string, or the class reference. It's recommended
+	// to use a string or call include() beforehand
+	var p = extend(MyClass, "cloudkid.EventDispatcher");
 
 }());
 ```

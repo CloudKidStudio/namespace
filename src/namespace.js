@@ -21,7 +21,7 @@
 	*  @param {string} namespaceString Name space, for instance 'springroll.utils'
 	*  @return {object} The namespace object attached to the current window
 	*/
-	var namespace = function(namespaceString) {
+	window.namespace = function(namespaceString) {
 		var parts = namespaceString.split('.'),
 			parent = window,
 			currentPart = '';
@@ -35,8 +35,4 @@
 		return parent;
 	};
 	
-	// Assign to the window namespace
-	window.namespace = namespace;
-	
 }(window));
-

@@ -37,6 +37,21 @@
 		assert.ok(!!Imported, "Included class");
 		assert.ok(Imported === MyClass, "Class assignments")
 	});
+
+	test('extend', function(assert){
+		expect(2);
+
+		var MyClass = function(){};
+		var ParentClass = function(){};
+
+		extend(MyClass, ParentClass);
+
+		var o = new MyClass();
+
+		assert.ok(o instanceof MyClass, "Inherit base class");
+		assert.ok(o instanceof ParentClass, "Inherit parent class");
+
+	});
 	</script>
 </body>
 </html>

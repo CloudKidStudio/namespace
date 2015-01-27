@@ -21,7 +21,7 @@
 	* 		For classes that aren't found and are required, an error is thrown.
 	*  @return {object|function} The object attached at the given namespace
 	*/
-	var include = function(namespaceString, required)
+	window.include = function(namespaceString, required)
 	{
 		var parts = namespaceString.split('.'),
 			parent = window,
@@ -51,8 +51,5 @@
 		}
 		return parent;
 	};
-	
-	// Assign to the window namespace
-	window.include = include;
 	
 }(window));

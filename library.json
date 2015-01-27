@@ -1,11 +1,12 @@
 {
 	"name": "namespace",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "Namespace utility",
 	"url": "https://github.com/CloudKidStudio/namespace",
 	"output": "namespace",
 	"main": [
 		"src/namespace.js",
-		"src/include.js"
+		"src/include.js",
+		"src/extend.js"
 	]
 }

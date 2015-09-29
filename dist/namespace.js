@@ -120,8 +120,10 @@
 		{
 			superClass = window.include(superClass);
 		}
+		subClass.prototype = superClass.prototype;
+		subClass.prototype.parent = superClass.prototype;
 		subClass.prototype = Object.create(
-			superClass.prototype
+			subClass.prototype
 		);
 		return subClass.prototype;
 	};

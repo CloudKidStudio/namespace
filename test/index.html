@@ -52,6 +52,24 @@
 		assert.ok(o instanceof ParentClass, "Inherit parent class");
 
 	});
+
+	test('extend.parent', function(assert){
+                expect(3);
+
+		var ParentClass = function(){};
+                ParentClass.prototype.ping = function(){return "parent";}
+                var MyClass = function(){};
+
+		extend(MyClass, ParentClass);
+		MyClass.prototype.ping = function(){return "child";}
+
+                var o = new MyClass();
+
+                assert.ok(o.ping() === "child", "Child function");
+                assert.ok(o.__parent.ping.apply(o) === "parent", "Parent function");
+		assert.ok(o.ping() !== o.__parent.ping.apply(o), "Child != Parent function");
+
+        });
 	</script>
 </body>
 </html>

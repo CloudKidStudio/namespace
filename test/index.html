@@ -66,8 +66,8 @@
                 var o = new MyClass();
 
                 assert.ok(o.ping() === "child", "Child function");
-                assert.ok(o.parent.ping.apply(o) === "parent", "Parent function");
-		assert.ok(o.ping() !== o.parent.ping.apply(o), "Child != Parent function");
+                assert.ok(o.__parent.ping.apply(o) === "parent", "Parent function");
+		assert.ok(o.ping() !== o.__parent.ping.apply(o), "Child != Parent function");
 
         });
 	</script>

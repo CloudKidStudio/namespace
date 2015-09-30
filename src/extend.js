@@ -27,7 +27,7 @@
 			superClass = window.include(superClass);
 		}
 		subClass.prototype = superClass.prototype;
-		subClass.prototype.parent = superClass.prototype;
+		subClass.prototype.__parent = superClass.prototype;
 		subClass.prototype = Object.create(
 			subClass.prototype
 		);
